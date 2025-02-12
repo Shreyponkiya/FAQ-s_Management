@@ -8,7 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [datalist, setDatalist] = useState([]);
   // const API_url = "http://localhost:3000/user"
-  const API_url = "https://api-new-git-main-shreyponkiyas-projects.vercel.app/"
+  const API_url = "https://api-new-dusky.vercel.app/"
   const getdata = async () => {
     try { 
       const response = await axios.get(API_url);
