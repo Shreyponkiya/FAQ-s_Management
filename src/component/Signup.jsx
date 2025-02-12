@@ -9,7 +9,7 @@ const Signup = () => {
   const [data, setData] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
   const navigate = useNavigate();
-  const API_url = "https://api-new-git-main-shreyponkiyas-projects.vercel.app/";
+  const API_url = "https://api-zt8d-mansimalaviya8s-projects.vercel.app/user";
   const initialValues = {
     username: "",
     email: "",

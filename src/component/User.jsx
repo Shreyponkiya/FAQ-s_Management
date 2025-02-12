@@ -7,7 +7,7 @@ import { nanoid } from "@reduxjs/toolkit";
 const User = () => {
   const [data, setData] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
-  const API_url = "https://api-new-git-main-shreyponkiyas-projects.vercel.app/";
+  const API_url = "https://api-zt8d-mansimalaviya8s-projects.vercel.app/user";
   const initialValues = {
     username: "",
     email: "",
