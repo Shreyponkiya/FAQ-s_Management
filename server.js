@@ -15,7 +15,7 @@ server.use(middlewares);
 
 // Use the router
 server.use(router);
-
+console.log(router)
 // Start the server
 const PORT = 3000;
 server.listen(PORT, () => {
