@@ -9,6 +9,7 @@ const Login = () => {
   const getdata = async () => {
     try {
       const response = await axios.get("https://api-mrij-shreyponkiyas-projects.vercel.app/");
+      console.log(response)
       setDatalist(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
