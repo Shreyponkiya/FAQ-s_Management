@@ -7,7 +7,7 @@ import { nanoid } from "@reduxjs/toolkit";
 const User = () => {
   const [data, setData] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
-
+  const API_url = "https://api-new-git-main-shreyponkiyas-projects.vercel.app/";
   const initialValues = {
     username: "",
     email: "",
@@ -41,7 +41,7 @@ const User = () => {
     }
 
     try {
-      await axios.post("https://api-mrij-shreyponkiyas-projects.vercel.app/", {
+      await axios.post(API_url, {
         id: nanoid(),
         username: values.username,
         email: values.email,
@@ -61,7 +61,7 @@ const User = () => {
     }
 
     try {
-      await axios.put(`https://api-mrij-shreyponkiyas-projects.vercel.app/${editingUser.id}`, {
+      await axios.put(`${API_url}${editingUser.id}`, {
         username: values.username,
         email: values.email,
         password: values.password,
@@ -76,7 +76,7 @@ const User = () => {
 
   const handleApi = async () => {
     try {
-      const response = await axios.get("https://api-mrij-shreyponkiyas-projects.vercel.app/");
+      const response = await axios.get(API_url);
       setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -85,7 +85,7 @@ const User = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://api-mrij-shreyponkiyas-projects.vercel.app/${id}`);
+      await axios.delete(`${API_url}${id}`);
       handleApi();
     } catch (error) {
       console.error("Error deleting user:", error);

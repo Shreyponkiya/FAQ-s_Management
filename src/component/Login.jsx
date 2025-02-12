@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Signup from "./Signup";
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [datalist, setDatalist] = useState([]);
+  // const API_url = "http://localhost:3000/user"
+  const API_url = "https://api-new-git-main-shreyponkiyas-projects.vercel.app/"
   const getdata = async () => {
-    try {
-      const response = await axios.get("https://api-mrij-shreyponkiyas-projects.vercel.app/");
+    try { 
+      const response = await axios.get(API_url);
       console.log(response)
       setDatalist(response.data);
     } catch (error) {
@@ -105,9 +108,7 @@ const Login = () => {
           </div>
           <p className="text-2xl pt-3 font-medium">
             Don't have an account?{" "}
-            <a href="/signup" className="text-blue-800">
-              Sign up
-            </a>
+            <Link to="/signup">Signup</Link>
           </p>
         </form>
       </div>
