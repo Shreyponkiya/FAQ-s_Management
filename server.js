@@ -5,7 +5,7 @@ const path = require('path');
 const server = jsonServer.create();
 
 // Set the JSON file as the database
-const router = jsonServer.router(path.join(__dirname, 'db.json'));
+const router = jsonServer.router(path.join(__dirname, 'user.json'));
 
 // Middleware for default settings
 const middlewares = jsonServer.defaults();
