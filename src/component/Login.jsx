@@ -7,8 +7,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [datalist, setDatalist] = useState([]);
-  // const API_url = "http://localhost:3000/user"
-  const API_url = "https://api-zt8d-mansimalaviya8s-projects.vercel.app/user"
+  const API_url = "https://server-1-pwpn.onrender.com/user"
   const getdata = async () => {
     try { 
       const response = await axios.get(API_url);

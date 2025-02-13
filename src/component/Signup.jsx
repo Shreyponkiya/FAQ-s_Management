@@ -9,7 +9,7 @@ const Signup = () => {
   const [data, setData] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
   const navigate = useNavigate();
-  const API_url = "https://api-zt8d-mansimalaviya8s-projects.vercel.app/user";
+  const API_url = "https://server-1-pwpn.onrender.com/user";
   const initialValues = {
     username: "",
     email: "",
@@ -137,9 +137,9 @@ const Signup = () => {
                     name="username"
                     value={values.username}
                   />
-                  {errors.username && touched.username && (
+                  {/* {errors.username && touched.username && (
                     <p className="error">{errors.username}</p>
-                  )}
+                  )} */}
                 </div>
                 <div>
                   <label className="font-semibold text-2xl" htmlFor="email">
@@ -155,9 +155,9 @@ const Signup = () => {
                     name="email"
                     value={values.email}
                   />
-                  {errors.email && touched.email && (
+                  {/* {errors.email && touched.email && (
                     <p className="error">{errors.email}</p>
-                  )}
+                  )} */}
                 </div>
                 <div>
                   <label htmlFor="password" className="font-semibold text-2xl">
@@ -173,9 +173,9 @@ const Signup = () => {
                     name="password"
                     value={values.password}
                   />
-                  {errors.password && touched.password && (
+                  {/* {errors.password && touched.password && (
                     <p className="error">{errors.password}</p>
-                  )}
+                  )} */}
                 </div>
                 <div className="flex justify-between pt-5">
                   <div>

@@ -7,7 +7,7 @@ import { nanoid } from "@reduxjs/toolkit";
 const User = () => {
   const [data, setData] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
-  const API_url = "https://api-zt8d-mansimalaviya8s-projects.vercel.app/user";
+  const API_url = "https://server-1-pwpn.onrender.com/user";
   const initialValues = {
     username: "",
     email: "",
@@ -61,7 +61,7 @@ const User = () => {
     }
 
     try {
-      await axios.put(`${API_url}${editingUser.id}`, {
+      await axios.put(`${API_url}/${editingUser.id}`, {
         username: values.username,
         email: values.email,
         password: values.password,
@@ -85,7 +85,7 @@ const User = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API_url}${id}`);
+      await axios.delete(`${API_url}/${id}`);
       handleApi();
     } catch (error) {
       console.error("Error deleting user:", error);
