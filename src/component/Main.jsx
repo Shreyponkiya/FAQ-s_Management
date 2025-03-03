@@ -1,23 +1,35 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import Signup from "./Signup";
 import About from "./About";
 import UserList from "./User";
+import Forget_passowrd from "./Forget_password";
+import FaqPage from "./FaqPage";
+import NotFoundPage from "./NotFoundPage";
+import { LanguageContext, LanguageProvider } from "../context/LanguageContext";
 import "../App.css";
-
+import i18n from "../i18n/i18n"; // Import i18n
 const Main = () => {
+  const [loading, setLoading] = useState(false);
+  const { language, changeLanguage } = useContext(LanguageContext); // Use contex
   const isLoggedIn = false;
   const currentusername = localStorage.getItem("current_user");
-  console.log(currentusername);
-
-  console.log("isLoggedIn:", isLoggedIn);
 
   const logout = () => {
-    localStorage.removeItem("current_user");
-    window.location.reload();
+    try {
+      localStorage.removeItem("current_user");
+      setLoading(true);
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
   };
-
+  addEventListener("load",()=>{
+    changeLanguage("en")
+  })
   return (
     <Router>
       <div>
@@ -41,15 +53,27 @@ const Main = () => {
             ) : null}
           </ul>
         </nav>
-
         <Routes>
           <Route
             path="/"
             element={currentusername ? <UserList /> : <Login />}
           />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/forget_password" element={<Forget_passowrd />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faqs" element={<FaqPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
+      </div>
+      <div className="flex justify-end absolute top-[20%] right-[5%] mb-4">
+        <select
+          onChange={(e) => changeLanguage(e.target.value)}
+          value={language}
+          className="border-2 p-2 rounded-lg"
+        >
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
       </div>
     </Router>
   );
