@@ -2,6 +2,9 @@
     "rewrites": [
       { "source": "/faqs/:path*", "destination": "./component/FaqPage.jsx"},
     { "source": "/:path*", "destination": "./component/FaqPage.jsx" }
+    ],
+    "routes": [
+      { "src": "/.*", "dest": "./api/server.js" }
     ]
   }
   
