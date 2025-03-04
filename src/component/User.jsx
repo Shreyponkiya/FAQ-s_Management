@@ -13,7 +13,7 @@ const User = () => {
   const [editingUser, setEditingUser] = useState(null);
   const API_urluser = "https://faq-s-management-server-13.onrender.com/user";
   const API_urlfaq =
-    "https://faq-s-management-server-1.onrender.com/faqcategory";
+    "https://faq-s-management-server-13.onrender.com/faqcategory";
   const initialValues = {
     category: "",
     createdBy: "",
