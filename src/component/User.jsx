@@ -68,8 +68,7 @@ const User = () => {
   };
 
   const handleFaqRedirect = (category) => {
-    const frontendURL = "https://faq-s-management-56eb.vercel.app"; // Replace with your actual frontend URL
-    const url = `${frontendURL}/faqs?category=${encodeURIComponent(category)}`;
+    const url = `/faqs?category=${encodeURIComponent(category)}`;
     window.open(url, "_blank");
   };
 
