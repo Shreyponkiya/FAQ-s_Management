@@ -14,7 +14,7 @@ const Signup = () => {
   const [data, setData] = useState([]);
   const [user_category, setuser_category] = useState(false);
   const [editingUser, setEditingUser] = useState(null);
-  const API_url = "http://localhost:4000/user";
+  const API_url = "https://faq-s-management-server-13.onrender.com/user";
   const initialValues = {
     username: "",
     email: "",

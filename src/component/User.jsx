@@ -11,8 +11,8 @@ const User = () => {
   const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(false);
   const [editingUser, setEditingUser] = useState(null);
-  const API_urluser = "http://localhost:4000/user";
-  const API_urlfaq = "http://localhost:4000/faqcategory";
+  const API_urluser = "https://faq-s-management-server-13.onrender.com/user";
+  const API_urlfaq = "https://faq-s-management-server-1.onrender.com/faqcategory";
   const initialValues = {
     category: "",
     createdBy: "",

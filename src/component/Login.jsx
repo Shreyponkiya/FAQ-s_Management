@@ -9,7 +9,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [datalist, setDatalist] = useState([]);
-  const API_url = "http://localhost:4000/user";
+  const API_url = "https://faq-s-management-server-13.onrender.com/user";
 
   useEffect(() => {
     const getdata = async () => {
