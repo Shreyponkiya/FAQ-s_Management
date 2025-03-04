@@ -155,7 +155,7 @@ const User = () => {
       ) : (
         <div>
           <div className="w-full h-auto p-8 justify-center items-center flex flex-col m-3">
-            {data.length > 0 && data[0].category && (
+            {isshow.length > 0 && isshow[0].category && (
               <form action="" onSubmit={handleSubmit}>
                 <div className=" border-2 border-gray-500 rounded-2xl py-10 px-5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] mb-20">
                   <div className="text-center pb-10 text-4xl font-semibold text-blue-300 ">
@@ -195,7 +195,7 @@ const User = () => {
                     <tr key={item._id}>
                       <td className="border-2 py-2 px-10">{item.category}</td>
                       <td className="border-2 py-2 px-10">{item.createdAt}</td>
-                        {data.length > 0 && data[0].category && (
+                        {isshow.length > 0 && isshow[0].category && (
                       <td className="border-2 py-2 px-4 cursor-pointe">
                           <button onClick={() => handleDelete(item._id)}>
                             Delete

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start":"vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -15,6 +16,7 @@
     "axios": "^1.7.9",
     "crypto": "^1.0.1",
     "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.7",
     "formik": "^2.4.6",
     "hashlib": "^1.0.1",
     "i18next": "^24.2.2",
