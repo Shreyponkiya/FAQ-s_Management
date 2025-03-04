@@ -12,7 +12,8 @@ const User = () => {
   const [loading, setLoading] = useState(false);
   const [editingUser, setEditingUser] = useState(null);
   const API_urluser = "https://faq-s-management-server-13.onrender.com/user";
-  const API_urlfaq = "https://faq-s-management-server-1.onrender.com/faqcategory";
+  const API_urlfaq =
+    "https://faq-s-management-server-1.onrender.com/faqcategory";
   const initialValues = {
     category: "",
     createdBy: "",
@@ -67,7 +68,8 @@ const User = () => {
   };
 
   const handleFaqRedirect = (category) => {
-    const url = `/faqs?category=${encodeURIComponent(category)}`;
+    const frontendURL = "https://faq-s-management-56eb.vercel.app"; // Replace with your actual frontend URL
+    const url = `${frontendURL}/faqs?category=${encodeURIComponent(category)}`;
     window.open(url, "_blank");
   };
 
@@ -195,13 +197,13 @@ const User = () => {
                     <tr key={item._id}>
                       <td className="border-2 py-2 px-10">{item.category}</td>
                       <td className="border-2 py-2 px-10">{item.createdAt}</td>
-                        {isshow.length > 0 && isshow[0].category && (
-                      <td className="border-2 py-2 px-4 cursor-pointe">
+                      {isshow.length > 0 && isshow[0].category && (
+                        <td className="border-2 py-2 px-4 cursor-pointe">
                           <button onClick={() => handleDelete(item._id)}>
                             Delete
                           </button>
-                      </td>
-                        )}
+                        </td>
+                      )}
                       <td className="border-2 py-2 px-4 cursor-pointe">
                         <button
                           onClick={() => handleFaqRedirect(item.category)}
