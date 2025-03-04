@@ -1,6 +1,6 @@
 {
     "rewrites": [
-      { "source": "/faqs", "destination": "/FaqPage.jsx" }
+      { "source": "/faqs", "destination": "./component/FaqPage.jsx" }
     ]
   }
   
