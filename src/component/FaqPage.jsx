@@ -4,6 +4,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n/i18n"; // Import i18n
+
 const API_urlfaq = "https://faq-s-management-server-13.onrender.com/faqs";
 const API_urluser = "https://faq-s-management-server-13.onrender.com/user";
 

@@ -4,12 +4,14 @@ import { useFormik } from "formik";
 import { Yup_schema } from "../schema/Yup_schema";
 import { nanoid } from "@reduxjs/toolkit";
 import Loader from "./Loader";
+import { useNavigate } from "react-router-dom";
 
 const User = () => {
   const [data, setData] = useState([]);
   const [isshow, setisshow] = useState(false);
   const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const [editingUser, setEditingUser] = useState(null);
   const API_urluser = "https://faq-s-management-server-13.onrender.com/user";
   const API_urlfaq =
@@ -67,9 +69,13 @@ const User = () => {
     }
   };
 
-  const handleFaqRedirect = (category) => {
-    const url = `/faqs?category=${encodeURIComponent(category)}`;
-    window.open(url, "_blank");
+  const handleFaqRedirect = async(category) => {
+    // await axios.post(API_urlfaq,{
+    //   category:category
+    // })
+    navigate(`/faqs?category=${encodeURIComponent(category)}`)
+    // const url = `/faqs?category=${encodeURIComponent(category)}`;
+    // window.open(url, "_blank");
   };
 
   const submitUpdate = async (values) => {
