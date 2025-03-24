@@ -14,6 +14,7 @@ const Signup = () => {
   const [data, setData] = useState([]);
   const [user_category, setuser_category] = useState(false);
   const [editingUser, setEditingUser] = useState(null);
+  const navigate = useNavigate();
   const API_url = "https://faq-s-management-server-13.onrender.com/user";
   const initialValues = {
     username: "",
@@ -60,6 +61,8 @@ const Signup = () => {
       });
       handleApi();
       resetForm();
+      alert("signup successfull completed")
+      navigate("/");
     } catch (error) {
       console.error(t("form_submission_error"), error);
     }

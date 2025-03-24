@@ -9,7 +9,7 @@ const API_urlfaq = "https://faq-s-management-server-13.onrender.com/faqs";
 const API_urluser = "https://faq-s-management-server-13.onrender.com/user";
 
 const FaqPage = () => {
-  const { t } = useTranslation(); // Use translation function
+  const { t } = useTranslation();
   const [faqs, setFaqs] = useState([]);
   const [ismodel, setismodel] = useState(false);
   const [editingFaq, setEditingFaq] = useState(null);

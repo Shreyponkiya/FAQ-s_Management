@@ -56,7 +56,6 @@ const Login = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-auto p-6 pt-20">
-
       <div className="rounded-2xl px-22 py-10 bg-blue-200 duration-900 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3)] hover:shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]">
         <h1 className="text-center pb-8 mb-2 text-4xl font-bold">
           {t("login_title")}
